@@ -10,7 +10,7 @@ const tokenVerify = require("../middlewares/tokenVerify");
 
 const router = express.Router();
 
-// router.use(tokenVerify)
+router.use(tokenVerify)
 // routing
 router.route("/").get(getAllUser).post(createUser);
 router.route("/:id").get(getSingleUser).delete(deleteUser).patch(updateUser);
